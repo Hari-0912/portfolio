@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hariharan D — B.Sc IT Student | Database &amp; Python</title>
+<meta name="description" content="Portfolio of Hariharan D, a B.Sc Information Technology student in Coimbatore, focused on SQL database design and Python. Explore the MediCart pharmacy management project and get in touch.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" aria-label="Hariharan D — home">
+      <span class="nav__logo-mark">HD</span>
+      <span class="nav__logo-text">hariharan<span class="dim">.</span>dev</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+      <a href="#home" class="nav__link active" data-nav>Home</a>
+      <a href="#about" class="nav__link" data-nav>About</a>
+      <a href="#education" class="nav__link" data-nav>Education</a>
+      <a href="#skills" class="nav__link" data-nav>Skills</a>
+      <a href="#projects" class="nav__link" data-nav>Project</a>
+      <a href="#contact" class="nav__link" data-nav>Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--sm btn--primary nav__cta">Contact Me</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="grid-glow"></div>
+    </div>
+
+    <div class="hero__inner section-inner">
+      <div class="hero__content reveal">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>-- available for entry-level roles</p>
+        <h1 class="hero__name">Hariharan&nbsp;D</h1>
+        <p class="hero__role">B.Sc Information Technology Student<span class="dim"> · </span>Database &amp; Python Fundamentals</p>
+
+        <p class="hero__intro">
+          Motivated and detail-oriented IT student who enjoys turning messy requirements into
+          clean, queryable data. Currently building a foundation in SQL database design and
+          Python, with a first real project shipped: a working pharmacy management system
+          built with a team.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn--ghost">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero__social" aria-label="Professional links">
+          <a href="#" class="social-chip" data-placeholder title="GitHub link not yet provided">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub <em>[Add GitHub URL]</em></span>
+          </a>
+          <a href="https://www.linkedin.com/in/hariharan-d-085177397" class="social-chip" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:hariharandeivasigamani7@gmail.com" class="social-chip">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Signature element: live "query" console + ER-style schema card, grounded in his real SQL/MediCart work -->
+      <div class="hero__visual reveal" style="--delay:120ms">
+        <div class="console" role="img" aria-label="Simulated SQL query returning profile summary">
+          <div class="console__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="console__title">profile.sql</span>
+          </div>
+          <div class="console__body">
+            <pre><code><span class="tok-kw">SELECT</span> name, role, location
+<span class="tok-kw">FROM</span> student
+<span class="tok-kw">WHERE</span> ready_to_learn = <span class="tok-bool">TRUE</span>;</code></pre>
+            <div class="console__result">
+              <span class="typewriter" id="typewriter"></span><span class="cursor" aria-hidden="true">▍</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="schema-card" aria-hidden="true">
+          <p class="schema-card__label">-- medicart schema</p>
+          <div class="schema-card__grid">
+            <div class="schema-table">
+              <span class="schema-table__name">medicines</span>
+              <span class="schema-table__row">id · name · price</span>
+            </div>
+            <div class="schema-table">
+              <span class="schema-table__name">stock</span>
+              <span class="schema-table__row">med_id · qty</span>
+            </div>
+            <div class="schema-table">
+              <span class="schema-table__name">billing</span>
+              <span class="schema-table__row">bill_id · total</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="eyebrow reveal">-- about</p>
+      <h2 class="section-title reveal">A student learning by building, not just reading</h2>
+
+      <div class="about-grid">
+        <p class="about-text reveal">
+          I'm currently pursuing my B.Sc in Information Technology at Sri Ramakrishna Mission
+          Vidyalaya College of Arts &amp; Science, Coimbatore (2024–2027). My focus so far has
+          been on the database side of software: writing clean SQL, designing table
+          relationships, and understanding how data actually flows through an application.
+          Alongside that, I'm building up my Python fundamentals. I'm looking for an
+          entry-level opportunity where I can apply what I already know, keep learning fast,
+          and contribute to a real product.
+        </p>
+
+        <div class="about-facts reveal" style="--delay:120ms">
+          <div class="fact">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div><span class="fact__label">Location</span><span class="fact__value">Coimbatore, Tamil Nadu</span></div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <div><span class="fact__label">Status</span><span class="fact__value">B.Sc IT, 2024–2027</span></div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-language" aria-hidden="true"></i>
+            <div><span class="fact__label">Languages</span><span class="fact__value">Tamil, English</span></div>
+          </div>
+          <div class="fact">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+            <div><span class="fact__label">Looking for</span><span class="fact__value">Entry-level IT / Developer role</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills reveal" style="--delay:180ms">
+        <span class="soft-skill"><i class="fa-solid fa-comments" aria-hidden="true"></i> Communication</span>
+        <span class="soft-skill"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Team Work</span>
+        <span class="soft-skill"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Problem Solving</span>
+        <span class="soft-skill"><i class="fa-regular fa-clock" aria-hidden="true"></i> Time Management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section section--alt" id="education">
+    <div class="section-inner">
+      <p class="eyebrow reveal">-- education</p>
+      <h2 class="section-title reveal">Education</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2024 — 2027 <em>· in progress</em></span>
+            <h3 class="timeline__title">B.Sc. Information Technology</h3>
+            <p class="timeline__org">Sri Ramakrishna Mission Vidyalaya College of Arts &amp; Science, Coimbatore</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal" style="--delay:100ms">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2023</span>
+            <h3 class="timeline__title">HSC</h3>
+            <p class="timeline__org">Government Higher Secondary School, Melapulam, Ranipet</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal" style="--delay:200ms">
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2021</span>
+            <h3 class="timeline__title">SSLC</h3>
+            <p class="timeline__org">Government Higher Secondary School, Melapulam, Ranipet</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <p class="eyebrow reveal">-- skills</p>
+      <h2 class="section-title reveal">Technical Skills</h2>
+      <p class="section-sub reveal">Still early in the journey — here's exactly what I can confidently work with today.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card__head">
+            <i class="fa-solid fa-database" aria-hidden="true"></i>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Queries</span>
+            <span class="tag">Database Design</span>
+            <span class="tag">Joins &amp; Relationships</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:100ms">
+          <div class="skill-card__head">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Python <em>(basics)</em></span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:200ms">
+          <div class="skill-card__head">
+            <i class="fa-solid fa-people-arrows" aria-hidden="true"></i>
+            <h3>Core Strengths</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Team Work</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Time Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section--alt" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow reveal">-- project</p>
+      <h2 class="section-title reveal">Featured Project</h2>
+
+      <article class="project-card reveal">
+        <div class="project-card__visual" aria-hidden="true">
+          <i class="fa-solid fa-kit-medical project-card__icon"></i>
+          <div class="project-card__lines">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="project-card__body">
+          <span class="project-card__tag">Group Project</span>
+          <h3>MediCart — Pharmacy / Medical Store Management System</h3>
+          <p>
+            Built as part of a team, MediCart manages medicine and product details, stock
+            levels, and billing for a pharmacy. I owned the database side: designing the
+            schema and writing the SQL that holds the whole system together.
+          </p>
+
+          <ul class="project-card__list">
+            <li>Designed and implemented the SQL database for MediCart</li>
+            <li>Created tables to manage medicine/product details, stock, and billing information</li>
+            <li>Applied queries, joins, and table relationships for efficient data handling</li>
+            <li>Collaborated with team members to deliver a working pharmacy management solution</li>
+          </ul>
+
+          <div class="skill-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Database Design</span>
+            <span class="tag">Team Collaboration</span>
+          </div>
+
+          <div class="project-card__links">
+            <a href="#" class="link-placeholder" data-placeholder title="GitHub link not yet provided">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> [Add GitHub URL]
+            </a>
+            <a href="#" class="link-placeholder" data-placeholder title="Live demo link not yet provided">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> [Add Live Demo URL]
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <p class="eyebrow reveal">-- contact</p>
+      <h2 class="section-title reveal">Let's work together</h2>
+      <p class="section-sub reveal">Have a role in mind, or just want to say hi? Send a message below.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="tel:9363881749" class="contact-item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>9363881749</span>
+          </a>
+          <a href="mailto:hariharandeivasigamani7@gmail.com" class="contact-item">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>hariharandeivasigamani7@gmail.com</span>
+          </a>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Coimbatore - 20, Tamil Nadu</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" style="--delay:120ms" novalidate>
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required aria-required="true">
+            <span class="form-error" id="err-name"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required aria-required="true">
+            <span class="form-error" id="err-email"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" required aria-required="true">
+            <span class="form-error" id="err-subject"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required aria-required="true"></textarea>
+            <span class="form-error" id="err-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Send Message
+          </button>
+
+          <p class="form-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            This form validates on the client only. To actually deliver messages, connect it
+            to a backend or a form service (e.g. Formspree, EmailJS, or a small server
+            endpoint).
+          </p>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <p>&copy; <span id="year"></span> Hariharan D. Built with HTML, CSS &amp; JavaScript.</p>
+    <div class="footer__social">
+      <a href="#" data-placeholder title="GitHub link not yet provided"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/hariharan-d-085177397" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:hariharandeivasigamani7@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
